@@ -1,0 +1,10 @@
+{
+  "siteId": "site_NSA1J36SDRCY24Q2QSEM",
+  "dataDir": ".cloudhal",
+  "analytics": {
+    "enabled": true
+  },
+  "comments": {
+    "available": true
+  }
+}

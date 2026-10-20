@@ -1,0 +1,7 @@
+dist/
+.astro/
+.cloudhal/
+node_modules/
+.wrangler/
+.dev.vars
+.env

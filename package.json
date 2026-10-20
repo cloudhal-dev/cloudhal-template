@@ -1,0 +1,59 @@
+{
+  "name": "cloudhal-blog",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Cloudhal, the agent-native site platform: a blog with Studio, MCP and approvals on Cloudflare Workers, D1 and R2.",
+  "type": "module",
+  "scripts": {
+    "dev": "cloudhal dev",
+    "studio": "cloudhal studio",
+    "snapshot": "cloudhal snapshot",
+    "mcp": "cloudhal mcp",
+    "build:static": "cloudhal build",
+    "deploy": "cloudhal deploy",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@cloudhal/astro-renderer": "0.1.1",
+    "@cloudhal/core-ts": "0.1.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "7.3.6",
+    "better-sqlite3": "13.0.3",
+    "tailwindcss": "^4.3.3",
+    "@astrojs/cloudflare": "14.3.4",
+    "@cloudhal/cli": "0.1.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.148.0",
+    "@cloudhal/cloudflare": "0.1.1"
+  },
+  "trustedDependencies": [
+    "better-sqlite3",
+    "esbuild",
+    "workerd"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "cloudflare": {
+    "label": "Cloudhal blog",
+    "products": [
+      "Workers",
+      "D1",
+      "R2"
+    ],
+    "categories": [
+      "storage"
+    ],
+    "docs_url": "https://github.com/cloudhal-dev/cloudhal/blob/main/docs/guides/deploy-button.md",
+    "bindings": {
+      "DB": {
+        "description": "The site's database: pages, posts, Studio accounts, analytics and comments. Shared with the admin Worker."
+      },
+      "BLOBS": {
+        "description": "Media and published snapshots. Shared with the admin Worker."
+      }
+    }
+  }
+}

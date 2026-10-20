@@ -1,0 +1,21 @@
+// The site Worker, as the Deploy to Cloudflare button reads it: it creates the D1 database and the
+// R2 bucket below (fills in the database id) and connects this repository to the Worker named here.
+// `npm run deploy` (`cloudhal deploy`) takes these names, rewrites this file in the build's checkout
+// and also deploys the admin Worker (Studio, API, MCP) as <name without -site>-admin.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cloudhal-blog-site",
+  "main": "@cloudhal/astro-renderer/cloudflare-entry",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cloudhal-blog-db",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "r2_buckets": [{ "binding": "BLOBS", "bucket_name": "cloudhal-blog-blobs" }],
+  "vars": { "CLOUDHAL_SITE_ID": "site_NSA1J36SDRCY24Q2QSEM" },
+  "observability": { "enabled": true }
+}

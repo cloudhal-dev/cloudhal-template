@@ -15,16 +15,16 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.4.6",
-    "@cloudhal/astro-renderer": "^0.8.0",
-    "@cloudhal/cli": "^0.8.0",
-    "@cloudhal/core-ts": "^0.8.0",
+    "@cloudhal/astro-renderer": "^0.9.0",
+    "@cloudhal/cli": "^0.9.0",
+    "@cloudhal/core-ts": "^0.9.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "7.4.7",
     "better-sqlite3": "13.0.3",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@cloudhal/cloudflare": "^0.8.0",
+    "@cloudhal/cloudflare": "^0.9.0",
     "wrangler": "^4.158.0"
   },
   "trustedDependencies": [
